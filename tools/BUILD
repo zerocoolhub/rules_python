@@ -17,3 +17,12 @@ licenses(["notice"])  # Apache 2.0
 
 # This is generated and updated by ./update_piptool.sh
 exports_files(["piptool.par"])
+
+py_test(
+    name = "par_test",
+    srcs = ["par_test.py"],
+    data = [
+        "//rules_python:piptool.par",
+        ":piptool.par",
+    ],
+)

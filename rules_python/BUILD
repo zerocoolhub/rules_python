@@ -36,8 +36,6 @@ py_test(
 load("@subpar//:subpar.bzl", "par_binary")
 load("@piptool_deps//:requirements.bzl", "all_requirements")
 
-# TODO(mattmoor): Bundle this tool as a PAR without any
-# system-installed pre-requisites.  See TODOs in piptool.py.
 par_binary(
     name = "piptool",
     srcs = ["piptool.py"],
